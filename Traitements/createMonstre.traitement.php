@@ -12,6 +12,6 @@ $monstre = new Monstre($nom, $pdd, $pdv, $pda, $pdvit);
 
 $monstre->insert();
 
-header('Location: ../Views/createMonstre.php');
+header('Location: ../index.php');
 
 ?>

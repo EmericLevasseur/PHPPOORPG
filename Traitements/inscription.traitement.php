@@ -16,4 +16,8 @@ include '../Class/Joueur.php';
 
 ?>
 
+Utilisateur créé ! Connectez-vous :
 <button type="button"  class="btn btn-info"><a href="../Views/login.php">Login</a></button>
+</br>
+Retour à l'accueil:
+<button type="button"  class="btn btn-info"><a href="../index.php">Accueil</a></button>
