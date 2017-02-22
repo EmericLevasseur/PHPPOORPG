@@ -21,17 +21,17 @@ class Joueur {
     $this->descriptif = $descriptif;
     $this->mdp        = $mdp;
     $this->id         = $id;
+
+    $this->db = new Connexion();
+    $this->db = $this->db->dbConnect();
   }
 
   public function insert(){
 
+    $sql = $this->db->prepare("INSERT INTO Joueur (nom, prenom, pseudo, email, descriptif, mdp)
+            VALUES('$this->nom', '$this->prenom', '$this->pseudo', '$this->email', '$this->descriptif', '$this->mdp')");
 
-
-    $bdd = new PDO('mysql:host=localhost;dbname=phppoo', 'root', 'root');
-    $sql = "INSERT INTO Joueur (nom, prenom, pseudo, email, descriptif, mdp)
-            VALUES('$this->nom', '$this->prenom', '$this->pseudo', '$this->email', '$this->descriptif', '$this->mdp')";
-
-    $bdd->query($sql);
+    $sql->execute();
 
 
   }

@@ -1,8 +1,5 @@
 <?php
-require_once 'libs/PHPMailer/PHPMailerAutoload.php';
-require_once 'config.php';
-include 'update.traitement.php';
-if (isset($_SESSION['email']) && (!empty($_SESSION['email']))) {
+include '../Class/Connexion.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,8 +9,6 @@ if (isset($_SESSION['email']) && (!empty($_SESSION['email']))) {
     <title></title>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <p><?php echo $_SESSION['nom']; ?></p>

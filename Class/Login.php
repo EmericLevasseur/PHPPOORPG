@@ -2,7 +2,7 @@
 
 include 'Connexion.php';
 
-class Log {
+class Login {
 
   public $db;
 
