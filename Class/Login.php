@@ -21,13 +21,13 @@ public function Login($email, $mdp){
     $log->execute();
 
     if($log->rowCount() == 1){
-        echo "Utilisateur vérifié";
+        echo "Bienvenue ! Votre compte a été vérifié";
     } else {
-        echo "Erreur 1";
+        echo "Ce compte n'existe pas";
         }
       }
       else {
-        echo "Erreur 2";
+        echo "Veuilliez insérer un email";
       }
     }
   }
