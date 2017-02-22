@@ -37,6 +37,7 @@
 
     <br />
           <input type="submit" value="Valider" name="submit" />
+          <button type="button"  class="btn btn-info"><a href="../index.php">Accueil</a></button>
        </fieldset>
     </form>
   </body>

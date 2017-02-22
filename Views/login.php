@@ -23,6 +23,7 @@
         </form>
         <div id="blank" class=" col-lg-4 col-lg-offset-4 bouton">
           <button type="button"  class="btn btn-info"><a href="inscription.php">Pas de compte ?</a></button>
+          <button type="button"  class="btn btn-info"><a href="../index.php">Accueil</a></button>
         </div>
 
   </body>
