@@ -12,26 +12,26 @@ class Niveau
   {
     $this->db = new Connexion();
     $this->db = $this->db->dbConnect();
-    $this->id             = $id;
+    $this->id = $id;
 
     if($this->id != null){
       $sql = 'select * from Niveau where idNiveau = :id' ;
       	$aParamUser				=	[
       		':id'			=>	$this->id,
       	];
-      	$oQuery					=	$this->db->prepare( $sUser );
+      	$oQuery					=	$this->db->prepare( $sql );
       	$oQuery->execute( $aParamUser );
       	$aUser					=	$oQuery->fetch();
     }
-
-    $this->save();
+      $this->save();
   }
-  public function getNiveau(){
-    $sql = 'select * from Niveau' ;
-      $oQuery					=	$this->db->prepare( $sUser );
+  public function getNiveau()
+  {
+      $sql      = 'SELECT * FROM Niveau';
+      $oQuery   = $this->db->prepare($sql);
       $oQuery->execute();
-      $aGetUser					=	$oQuery->fetchAll();
-      return $aGetUser;
+      $aGetNiveau	=	$oQuery->fetchAll();
+      return $aGetNiveau;
 
   }
 
@@ -42,7 +42,7 @@ class Niveau
   public function save()
   {
   //  global $bdd;
-    if(empty($aUser)){
+    if(empty($aUser) && (!empty($_POST['numeroSalle'])) && (!empty($_POST['porte'])) && (!empty($_POST['id_coffre']))){
       //$sQuery				=	;
       $aParamUser			=	[
       ':numeroSalle'			=>	$_POST['numeroSalle'],
@@ -53,7 +53,7 @@ class Niveau
       $bReturn = $oQuery->execute( $aParamUser );
     }else{
       global $bdd;
-      if(empty($aUser)){
+      if(!empty($aUser) && (!empty($_POST['numeroSalle'])) && (!empty($_POST['porte'])) && (!empty($_POST['id_coffre']))){
         $aParamUser			=	[
         ':numeroSalle'			=>	$_POST['numeroSalle'],
         ':porte'				    =>	$_POST['porte'],
