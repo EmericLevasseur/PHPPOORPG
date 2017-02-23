@@ -15,6 +15,7 @@ if(isset($_POST['delete']))
   $id = $_GET['id'];
   $niveau = new Niveau($id,null,null,null);
   $niveau->delete();
+  
 
 
 }

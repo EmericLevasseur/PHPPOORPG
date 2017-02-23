@@ -71,7 +71,6 @@ class Niveau
     ];
     $oQuery =	$this->db->prepare ('DELETE FROM `Niveau` WHERE idNiveau = :id');
     $bReturn = $oQuery->execute( $aParamUser );
-    var_dump($bReturn);exit();
 
   }
 }
