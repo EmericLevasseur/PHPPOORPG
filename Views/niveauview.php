@@ -1,29 +1,4 @@
-<?php
-include '../Class/Niveau.php';
-include '../Traitements/niveau.traitement.php';
 
-$niveau = new Niveau();
-$aNiveau = $niveau->getNiveau();
-?>
-<table>
-  <tr>
-    <td>Id</td>
-    <td>Numero Salle</td>
-    <td> Porte </td>
-    <td> Id coffre</td>
-  </tr>
-  <?php
-  foreach($aNiveau as $aniveau)
-  { ?>
-    <tr>
-      <td><?php if(empty($aniveau['idNiveau'])){echo 'null';}else{ echo $aniveau['idNiveau'];}?></td>
-      <td><?php if(empty($aniveau['numeroSalle'])){echo 'null';}else{ echo $aniveau['numeroSalle'];}?></td>
-      <td><?php if(empty($aniveau['numeroSalle'])){echo 'null';}else{ echo $aniveau['porte'];}?></td>
-      <td><?php if(empty($aniveau['id_coffre'])){echo 'null';}else{ echo $aniveau['id_coffre'];}?></td>
-    </tr>
-  <?php  }
-    ?>
-</table>
 
 <!DOCTYPE html>
 <html>
@@ -35,7 +10,7 @@ $aNiveau = $niveau->getNiveau();
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-    <form class="" action="../Traitements/niveau.traitement.php" method="post">
+    <form class="" action="../Traitements/niveau.traitement.php?id=<?php echo $_GET['id']; ?>" method="post">
       <legend>Création d'un niveau </legend>
       <br>
       <label for="numeroSalle">Numero de salle : </label>

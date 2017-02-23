@@ -39,10 +39,11 @@ class Niveau
   {
       echo $this->getNumeroSalle();
   }
+
   public function save()
   {
   //  global $bdd;
-    if(empty($aUser) && (!empty($_POST['numeroSalle'])) && (!empty($_POST['porte'])) && (!empty($_POST['id_coffre']))){
+    if(empty($this->id) && (!empty($_POST['numeroSalle'])) && (!empty($_POST['porte'])) && (!empty($_POST['id_coffre']))){
       //$sQuery				=	;
       $aParamUser			=	[
       ':numeroSalle'			=>	$_POST['numeroSalle'],
@@ -51,20 +52,26 @@ class Niveau
       ];
       $oQuery	=	$this->db->prepare ( 'INSERT INTO `Niveau`(`numeroSalle`,`porte`,`id_coffre`) VALUES (:numeroSalle,:porte,:id_coffre);' );
       $bReturn = $oQuery->execute( $aParamUser );
-    }else{
-      global $bdd;
-      if(!empty($aUser) && (!empty($_POST['numeroSalle'])) && (!empty($_POST['porte'])) && (!empty($_POST['id_coffre']))){
+    }elseif(!empty($this->id) && (!empty($_POST['numeroSalle'])) && (!empty($_POST['porte'])) && (!empty($_POST['id_coffre']))){
         $aParamUser			=	[
         ':numeroSalle'			=>	$_POST['numeroSalle'],
         ':porte'				    =>	$_POST['porte'],
         ':id_coffre'				=>	$_POST['id_coffre'],
-        ':idNiveau'				=>	$aUser['idNiveau'],
+        ':idNiveau'				=>	$this->id,
         ];
         $oQuery	=	$this->db->prepare ( 'UPDATE Niveau SET numeroSalle = :numeroSalle, porte = :porte, id_coffre = :id_coffre WHERE idNiveau = :idNiveau' );
         $bReturn = $oQuery->execute( $aParamUser );
+
     }
+  }
+  public function delete()
+  {
+    $aParamUser			=	[
+    ':id'			=>	$this->id,
+    ];
+    $oQuery =	$this->db->prepare ('DELETE FROM `Niveau` WHERE idNiveau = :id');
+    $bReturn = $oQuery->execute( $aParamUser );
+    var_dump($bReturn);exit();
 
   }
-
-}
 }
