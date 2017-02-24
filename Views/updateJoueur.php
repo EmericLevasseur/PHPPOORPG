@@ -32,7 +32,8 @@ include '../Class/Connexion.php';
     <input type="submit" name="modifier" value="Modifier"><br></br>
     </form>
 
-    <?php } else {
+    <?php
+    else {
       header('Location: login.php');
     }?>
   </body>

@@ -29,7 +29,7 @@ include '../Traitements/niveau.traitement.php';
         <tr>
           <td> <a href="niveauview.php?id=<?php echo $aniveau['idNiveau'] ?>"><?php if(empty($aniveau['idNiveau'])){echo 'null';}else{ echo $aniveau['idNiveau'];}?></a></td>
           <td><?php if(empty($aniveau['numeroSalle'])){echo 'null';}else{ echo $aniveau['numeroSalle'];}?></td>
-          <td><?php if(empty($aniveau['numeroSalle'])){echo 'null';}else{ echo $aniveau['porte'];}?></td>
+          <td><?php if(empty($aniveau['porte'])){echo 'null';}else{ echo $aniveau['porte'];}?></td>
           <td><?php if(empty($aniveau['id_coffre'])){echo 'null';}else{ echo $aniveau['id_coffre'];}?></td>
           <td>
             <form class="" action="../Traitements/niveau.traitement.php?id=<?php echo $aniveau['idNiveau'] ?>" method="post">
