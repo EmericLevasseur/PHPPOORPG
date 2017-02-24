@@ -2,7 +2,7 @@
 
 include 'Connexion.php';
 
-class Types {
+class Types extends Personnage{
 
     public $nom = '';
     private $id = '';

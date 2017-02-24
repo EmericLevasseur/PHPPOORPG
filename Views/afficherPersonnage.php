@@ -32,7 +32,8 @@ $aPersonnage = $personnage->getPersonnage();
     foreach($aPersonnage as $apersonnage)
     { ?>
         <tr>
-            <td> <a href="Personnageview.php?id=<?php echo $aPersonnage['idPersonnage'] ?>"><?php if(empty($aPersonnage['idPersonnage'])){echo 'null';}else{ echo $aPersonnage['idPersonnage'];}?></a></td>
+
+            <td> <a href="Personnageview.php?id=<?php echo $apersonnage['idPersonnage'] ?>"><?php if(empty($apersonnage['idPersonnage'])){echo 'null';}else{ echo $apersonnage['idPersonnage'];}?></a></td>
             <td><?php if(empty($apersonnage['nom'])){echo 'null';}else{ echo $apersonnage['nom'];}?></td>
             <td><?php if(empty($apersonnage['pdd'])){echo 'null';}else{ echo $apersonnage['pdd'];}?></td>
             <td><?php if(empty($apersonnage['pdv'])){echo 'null';}else{ echo $apersonnage['pdv'];}?></td>
@@ -40,6 +41,7 @@ $aPersonnage = $personnage->getPersonnage();
             <td><?php if(empty($apersonnage['pdvit'])){echo 'null';}else{ echo $apersonnage['pdvit'];}?></td>
             <td><?php if(empty($apersonnage['pdm'])){echo 'null';}else{ echo $apersonnage['pdm'];}?></td>
             <td><?php if(empty($apersonnage['argent'])){echo 'null';}else{ echo $apersonnage['argent'];}?></td>
+            <td><?php if(empty($apersonnage['id_classe'])){echo 'null';}else{ echo $apersonnage['id_classe'];}?></td>
 
             <td>
                 <form class="" action="../Traitements/personnage.traitement.php?id=<?php echo $apersonnage['idPersonnage'] ?>" method="post">
