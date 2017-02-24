@@ -43,6 +43,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Megrim);
 body{
+  font: 400 1em/1.5 "Neuton";
   font-family: OCR A Std, monospace;
 }
 #menu-wrapper{
@@ -114,6 +115,6 @@ a:active {
   <li class='main-menu selected'><a href="Views/personnageview.php">Créer un Personnage</a></li>
     <li class='main-menu'><a href="Views/niveauview.php">Créer un Niveau</a></li>
   </br>
-    <li class='main-menu'><a href="Views/niveauview.php">Lancer la partie</a></li>
+    <li class='main-menu'><a href="http://www.kongregate.com/games/DustinAux/the-enchanted-cave-2">Lancer la partie</a></li>
   </ul>
 </div>
