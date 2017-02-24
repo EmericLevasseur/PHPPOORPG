@@ -231,7 +231,7 @@ a:active {
   &mdash; Developped by IIM &mdash;
 </p>
 <div class="flex">
-  <a href="test.php" class="bttn">Jouer</a>
+  <a href="menu.php" class="bttn">Jouer</a>
 </div>
 <div id="back"></div>
 <div id="front"></div>
