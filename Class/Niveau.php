@@ -52,6 +52,10 @@ class Niveau
       ];
       $oQuery	=	$this->db->prepare ( 'INSERT INTO `Niveau`(`numeroSalle`,`porte`,`id_coffre`) VALUES (:numeroSalle,:porte,:id_coffre);' );
       $bReturn = $oQuery->execute( $aParamUser );
+      if($bReturn)
+      {
+        header('Location: ../Views/afficherNiveau.php');
+      }
     }elseif(!empty($this->id) && (!empty($_POST['numeroSalle'])) && (!empty($_POST['porte'])) && (!empty($_POST['id_coffre']))){
         $aParamUser			=	[
         ':numeroSalle'			=>	$_POST['numeroSalle'],
@@ -61,7 +65,10 @@ class Niveau
         ];
         $oQuery	=	$this->db->prepare ( 'UPDATE Niveau SET numeroSalle = :numeroSalle, porte = :porte, id_coffre = :id_coffre WHERE idNiveau = :idNiveau' );
         $bReturn = $oQuery->execute( $aParamUser );
-
+        if($bReturn)
+        {
+          header('Location: ../Views/afficherNiveau.php');
+        }
     }
   }
   public function delete()
@@ -71,6 +78,9 @@ class Niveau
     ];
     $oQuery =	$this->db->prepare ('DELETE FROM `Niveau` WHERE idNiveau = :id');
     $bReturn = $oQuery->execute( $aParamUser );
-
+    if($bReturn)
+    {
+      header('Location: ../Views/afficherNiveau.php');
+    }
   }
 }
