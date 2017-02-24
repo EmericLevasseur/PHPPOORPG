@@ -97,7 +97,7 @@ class Joueur {
 
     }
 
-
+/*
     public function observer(Niveau $numeroSalle, Personnage $id){
       return $numeroSalle->numeroSalle;
       return Personnage::getPersonnage();
@@ -127,3 +127,5 @@ class Joueur {
       if (($joueur->observer() == true) && (count($monstre) == 0)) {
         echo "Vous avez gagné". .$objet;
       }
+      */
+    }

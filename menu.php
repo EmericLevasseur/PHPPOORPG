@@ -109,7 +109,7 @@ a:active {
 <div id='menu-wrapper'>
   <div id='menu-header'>Menu du Jeu</div>
   <ul id='menu-selectors'>
-    <li class='main-menu selected'><a href="Views/inscription.php">Inscription</a></li>
+    <li class='main-menu selected'><a href="Views/jeux.php">Inscription</a></li>
     <li class='main-menu'><a href="Views/login.php">Login</a></li>
   </br>
   <li class='main-menu selected'><a href="Views/personnageview.php">Créer un Personnage</a></li>
