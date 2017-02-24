@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cad853df-242e-4762-8858-4a3e7ace3329" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Class/Personnage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Traitements/personnage.traitement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/afficherPersonnage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/personnageview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/afficherNiveau.php" afterPath="$PROJECT_DIR$/Views/afficherNiveau.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/updateJoueur.php" afterPath="$PROJECT_DIR$/Views/updateJoueur.php" />
-    </list>
+    <list default="true" id="cad853df-242e-4762-8858-4a3e7ace3329" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +15,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Niveau.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Niveau.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Class/Niveau.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
@@ -34,6 +26,19 @@
                 <marker date="1487894531000" expanded="true" signature="1326:1421" ph="INSERT INTO `Niveau`... " />
                 <marker date="1487894531000" expanded="true" signature="1863:1974" ph="UPDATE Nivea... " />
                 <marker date="1487894531000" expanded="true" signature="2163:2204" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Monstre.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class/Monstre.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <folding>
+                <marker date="1487882952000" expanded="true" signature="620:762" ph="INSERT INTO Personnage... " />
+                <marker date="1487882952000" expanded="true" signature="913:955" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -99,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Personnage.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Personnage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Class/Personnage.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="858">
@@ -113,16 +118,6 @@
                 <marker date="1487891356000" expanded="true" signature="2672:2821" ph="UPDATE Perso... " />
                 <marker date="1487891356000" expanded="true" signature="3044:3093" ph="DELETE FROM " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="personnage.traitement.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Traitements/personnage.traitement.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -325,12 +320,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487775045815</updated>
-      <workItem from="1487775047869" duration="17914000" />
+      <workItem from="1487775047869" duration="18012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17914000" />
+    <option name="totallyTimeSpent" value="18012000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -504,17 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class/Monstre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <marker date="1487882952000" expanded="true" signature="620:762" ph="INSERT INTO Personnage... " />
-            <marker date="1487882952000" expanded="true" signature="913:955" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Traitements/createMonstre.traitement.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -605,6 +589,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Class/Niveau.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <marker date="1487894531000" expanded="true" signature="354:395" ph="select * fro... Niveau" />
+            <marker date="1487894531000" expanded="true" signature="676:696" ph="SELECT * FRO... Niveau" />
+            <marker date="1487894531000" expanded="true" signature="1326:1421" ph="INSERT INTO `Niveau`... " />
+            <marker date="1487894531000" expanded="true" signature="1863:1974" ph="UPDATE Nivea... " />
+            <marker date="1487894531000" expanded="true" signature="2163:2204" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class/Monstre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <marker date="1487882952000" expanded="true" signature="620:762" ph="INSERT INTO Personnage... " />
+            <marker date="1487882952000" expanded="true" signature="913:955" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Class/Personnage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
@@ -617,20 +626,6 @@
             <marker date="1487891356000" expanded="true" signature="2672:2811" ph="UPDATE Nivea... " />
             <marker date="1487891356000" expanded="true" signature="2672:2821" ph="UPDATE Perso... " />
             <marker date="1487891356000" expanded="true" signature="3044:3093" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class/Niveau.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <marker date="1487894531000" expanded="true" signature="354:395" ph="select * fro... Niveau" />
-            <marker date="1487894531000" expanded="true" signature="676:696" ph="SELECT * FRO... Niveau" />
-            <marker date="1487894531000" expanded="true" signature="1326:1421" ph="INSERT INTO `Niveau`... " />
-            <marker date="1487894531000" expanded="true" signature="1863:1974" ph="UPDATE Nivea... " />
-            <marker date="1487894531000" expanded="true" signature="2163:2204" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
