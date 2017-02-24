@@ -58,6 +58,12 @@ class Personnage
             ];
             $oQuery	=	$this->db->prepare ( 'INSERT INTO `Personnage`(`nom`,`pdd`,`pdv`,`pda`,`pdvit`,`pdm`,`argent`) VALUES (:nom,:pdd,:pdv,:pda,:pdvit,:pdm,:argent);' );
             $bReturn = $oQuery->execute( $aParamUser );
+
+            if($bReturn)
+            {
+                header('Location: ../Views/afficherPersonnage.php');
+            }
+
         }elseif(!empty($this->id) && (!empty($_POST['nom'])) && (!empty($_POST['pdd'])) && (!empty($_POST['pdv'])) && (!empty($_POST['pda'])) && (!empty($_POST['pdvit'])) && (!empty($_POST['pdm'])) && (!empty($_POST['argent']))){
             $aParamUser			=	[
                 ':nom'			=>	$_POST['nom'],
@@ -71,6 +77,10 @@ class Personnage
             ];
             $oQuery	=	$this->db->prepare ( 'UPDATE Personnage SET nom = :nom, pdd = :pdd, pdv = :pdv, pda = :pda, pdvit = :pdvit, pdm = :pdm, argent = :argent WHERE idPersonnage = :idPersonnage' );
             $bReturn = $oQuery->execute( $aParamUser );
+            if($bReturn)
+            {
+                header('Location: ../Views/afficherPersonnage.php');
+            }
 
         }
     }
@@ -81,7 +91,9 @@ class Personnage
         ];
         $oQuery =	$this->db->prepare ('DELETE FROM `Personnage` WHERE idPersonnage = :id');
         $bReturn = $oQuery->execute( $aParamUser );
-        var_dump($bReturn);exit();
-
+        if($bReturn)
+        {
+            header('Location: ../Views/afficherPersonnage.php');
+        }
     }
 }

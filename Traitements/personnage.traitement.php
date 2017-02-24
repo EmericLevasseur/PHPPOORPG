@@ -14,7 +14,7 @@ if(isset($_POST['delete']))
 {
     $id = $_GET['id'];
     $personnage = new Personnage($id,null,null,null,null,null,null,null);
-    $niveau->delete();
+    $personnage->delete();
 
 
 }

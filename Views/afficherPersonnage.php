@@ -1,6 +1,6 @@
 <?php
 include '../Class/Personnage.php';
-include '../Traitements/niveau.traitement.php';
+include '../Traitements/personnage.traitement.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@ $aPersonnage = $personnage->getPersonnage();
 ?>
 <table>
     <tr>
-        <td>Id</td>
+        <td>ID</td>
         <td>Nom</td>
         <td>Point de défense</td>
         <td>Point de vie</td>
@@ -44,7 +44,6 @@ $aPersonnage = $personnage->getPersonnage();
             <td>
                 <form class="" action="../Traitements/personnage.traitement.php?id=<?php echo $apersonnage['idPersonnage'] ?>" method="post">
                     <input type="hidden" name="delete">
-                    <input type="text" name="connard" value="3">
                     <button class="btn btn-danger">Delete</button>
                 </form>
             </td>
