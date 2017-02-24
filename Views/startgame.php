@@ -1,6 +1,6 @@
 <?php
-include '../Class/Personnage.php';
-include '../Traitements/game.traitement.php';
+require_once '../Class/Personnage.php';
+require_once '../Traitements/game.traitement.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,6 +11,11 @@ include '../Traitements/game.traitement.php';
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
   </head>
   <body>
-
+    <a href="startgame.php?action=Observer">Observer</a>
+    <a href="startgame.php?action=Attaquer">Attaquer</a>
+    <a href="startgame.php?action=Defendre">Défendre</a>
+    <a href="startgame.php?action=Ouvrir">Ouvrir un coffre</a>
+    <a href="startgame.php?action=Fuir">Fuir</a>
+    <a href="startgame.php?action=Avancer">Avancer</a>
   </body>
 </html>

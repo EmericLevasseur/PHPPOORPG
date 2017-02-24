@@ -1,6 +1,6 @@
 <?php
-include '../Class/Personnage.php';
-include '../Traitements/personnage.traitement.php';
+require_once '../Class/Personnage.php';
+require_once '../Traitements/personnage.traitement.php';
 ?>
 <!DOCTYPE html>
 <html>

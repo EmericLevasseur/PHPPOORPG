@@ -1,18 +1,32 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
+require_once 'Connexion.php';
+require_once 'Paladin.php';
+require_once 'Gobelin.php';
+require_once 'Barbare.php';
+require_once 'Magicien.php';
+require_once 'MagicienNoir.php';
+require_once 'Dragon.php';
 
 Class Taverne
 {
 
+private $db;
+
   public static function getHero($id)
   {
+    $db = new Connexion();
+    $db = $db->dbConnect();
     $aParam = [
       ':id' => $id,
     ];
-    $select = ('SELECT nom from Classe where idClasse in ( select id_classe from personnage where id_classe = :id )' );
+    $select = 'SELECT nom from Classe where idClasse in ( select id_classe from Personnage where idPersonnage = :id)';
+    $select   = $db->prepare($select);
     $select->execute( $aParam );
     $aGetNom	=	$select->fetch();
-
-    switch($aGetNom)
+    switch($aGetNom['nom'])
     {
       case('paladin'):
         return new Paladin($id);
@@ -33,5 +47,18 @@ Class Taverne
         return new Dragon($id);
         break;
     }
+  }
+  public static function getNom($id)
+  {
+    $db = new Connexion();
+    $db = $db->dbConnect();
+    $aParam = [
+      ':id' => $id,
+    ];
+    $sql      = 'SELECT * FROM Personnage where idPersonnage = :id';
+    $oQuery   = $db->prepare($sql);
+    $oQuery->execute( $aParam );
+    $aGetNom	=	$oQuery->fetch();
+    return $aGetNom;
   }
 }

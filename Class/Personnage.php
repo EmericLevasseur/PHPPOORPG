@@ -1,5 +1,5 @@
 <?php
-include 'Connexion.php';
+require_once 'Connexion.php';
 
 class Personnage
 {
@@ -132,7 +132,7 @@ class Personnage
 
     public function attaquer()
     {
-      
+
     }
 
     public function observer()
