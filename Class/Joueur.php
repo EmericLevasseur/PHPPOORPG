@@ -98,5 +98,32 @@ class Joueur {
     }
 
 
+    public function observer(Niveau $numeroSalle, Personnage $id){
+      return $numeroSalle->numeroSalle;
+      return Personnage::getPersonnage();
+    }
 
-}
+    public function attaquer(Monstre $monstre){
+      if($this != null) {
+
+      }
+    }
+
+    public function defendre(){
+
+    }
+
+    public function avancer(Niveau $id){
+      if (Monstre::getMonstre() == null) {
+        $this = $this ++;
+      }
+    }
+
+    public function fuir(){
+
+    }
+
+    public function ouvrirCoffre(Coffre $objet){
+      if (($joueur->observer() == true) && (count($monstre) == 0)) {
+        echo "Vous avez gagné". .$objet;
+      }

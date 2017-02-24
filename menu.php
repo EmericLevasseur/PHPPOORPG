@@ -1,7 +1,49 @@
 <style>
+
+*{
+  padding:0px;
+  margin:0px;
+}
+
+.back{
+  height:100vh;
+  width:100%;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url(http://www.imgbase.info/images/safe-wallpapers/miscellaneous/simple/55344_simple_simple_blue_smiple_blue_with_stars.jpg);
+}
+
+.one{
+  height:400vh;
+  width:100%;
+  background:url(http://res.cloudinary.com/samarthdesigns/image/upload/v1487090133/1_vzz3ln.png) center;
+  background-size:cover;
+  position:fixed;
+  top:0px;
+  opacity:0.6;
+}
+
+.oneani{
+  animation:one 35s linear infinite;
+}
+
+
+.two{
+  height:400vh;
+  width:100%;
+  background:url(http://res.cloudinary.com/samarthdesigns/image/upload/v1487090133/2_htb01i.png) center;
+  background-size:cover;
+  position:fixed;
+  top:0px;
+  opacity:0.4;
+  transform:scale(1);
+}
+
+.twoani{
+  animation:one 70s linear infinite;
+}
+
 @import url(http://fonts.googleapis.com/css?family=Megrim);
 body{
-  font-family: 'Megrim', cursive;
+  font-family: OCR A Std, monospace;
 }
 #menu-wrapper{
   position:fixed;
@@ -28,7 +70,6 @@ body{
   margin-left:-40px;
 }
 .selected{
-  background-color:#4183D7;
   color:white;
 }
 #hidden-menu{
@@ -40,22 +81,39 @@ body{
   height:50%;
   visibility:hidden;
 }
+a {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s all ease;
+  font-family: OCR A Std, monospace;
+}
+a:hover {
+  color: #B15947;
+}
+a:focus {
+  text-decoration: none;
+}
+a:active {
+  color: #FFF;
+}
+
 </style>
 
-<!--<script src='http://code.jquery.com/jquery-latest.min.js'></script>-->
+<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+<div class="one"></div>
+<div class="two"></div>
+<div class="back">
+</div>
+
 <div id='menu-wrapper'>
   <div id='menu-header'>Menu du Jeu</div>
   <ul id='menu-selectors'>
-    <li class='main-menu selected'>Créer</li>
-    <li class='main-menu'>Bottom</li>
-    <li class='main-menu'>Left</li>
-    <li class='main-menu'>Right</li>
-  </ul>
-</div>
-<div id='hidden-menu'>
-  <div id='menu-header'>Submenu</div>
-  <ul id='menu-selectors'>
-    <li class='hidden-menu'>Play</li>
-    <li class='hidden-menu'>Credits</li>
+    <li class='main-menu selected'><a href="Views/inscription.php">Inscription</a></li>
+    <li class='main-menu'><a href="Views/login.php">Login</a></li>
+  </br>
+  <li class='main-menu selected'><a href="Views/personnageview.php">Créer un Personnage</a></li>
+    <li class='main-menu'><a href="Views/niveauview.php">Créer un Niveau</a></li>
+  </br>
+    <li class='main-menu'><a href="Views/niveauview.php">Lancer la partie</a></li>
   </ul>
 </div>
