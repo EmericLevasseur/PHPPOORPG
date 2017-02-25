@@ -6,6 +6,10 @@ Class Magicien extends Personnage
 {
 
 
+  public function pda()
+  {
+    return $this->pda = 0;
+  }
   public function pdm()
   {
     return $this->pdm = 50;

@@ -10,11 +10,11 @@ if(!empty($_GET['id']))
   echo '</br>';
   echo '</br>';
   $heros = Taverne::getHero($id);
-   echo 'Points d\'attaque : ' . $heros->pda();
+   echo 'Points d\'attaque : '; if(!empty($heros->pda())){ echo $heros->pda(); }else{echo 0;}
    echo '</br>';
-   echo 'Points de défense : ' . $heros->pdd();
+   echo 'Points de défense : '; if(!empty($heros->pdd())){ echo $heros->pdd(); }else{echo 0;}
    echo '</br>';
-   echo 'Points de magie : ' . $heros->pdm();
+   echo 'Points de magie : '; if(null == $heros->pdm()){ echo $heros->pdm(); }else{echo 0;}
 }
 
 if(!empty($_GET['action']))

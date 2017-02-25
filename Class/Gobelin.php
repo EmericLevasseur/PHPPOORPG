@@ -14,6 +14,10 @@ Class Gobelin extends Personnage
   {
     return $this->pdd = 15;
   }
+  public function pdm()
+  {
+    return $this->pdm = 0;
+  }
 
 
 }

@@ -14,6 +14,10 @@ Class MagicienNoir extends Personnage
   {
     return $this->pdd = 25;
   }
+  public function pdm()
+    {
+      return $this->pdm = 0;
+    }
 
 
 }

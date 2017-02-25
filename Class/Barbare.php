@@ -14,6 +14,10 @@ Class Barbare extends Personnage
   {
     return $this->pdd = 50;
   }
+  public function pdm()
+  {
+    return $this->pdm = 0;
+  }
 
 
 }

@@ -14,6 +14,10 @@ Class Dragon extends Personnage
   {
     return $this->pdd = 35;
   }
+  public function pdm()
+  {
+    return $this->pdm = 0;
+  }
 
 
 }

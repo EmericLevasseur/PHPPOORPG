@@ -11,11 +11,11 @@ require_once '../Traitements/game.traitement.php';
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
   </head>
   <body>
-    <a href="startgame.php?action=Observer">Observer</a>
-    <a href="startgame.php?action=Attaquer">Attaquer</a>
-    <a href="startgame.php?action=Defendre">Défendre</a>
-    <a href="startgame.php?action=Ouvrir">Ouvrir un coffre</a>
-    <a href="startgame.php?action=Fuir">Fuir</a>
-    <a href="startgame.php?action=Avancer">Avancer</a>
+    <a href="startgame.php?id=<?php echo $_GET['id']; ?>?action=Observer">Observer</a>
+    <a href="startgame.php?id=<?php echo $_GET['id']; ?>?action=Attaquer">Attaquer</a>
+    <a href="startgame.php?id=<?php echo $_GET['id']; ?>?action=Defendre">Défendre</a>
+    <a href="startgame.php?id=<?php echo $_GET['id']; ?>?action=Ouvrir">Ouvrir un coffre</a>
+    <a href="startgame.php?id=<?php echo $_GET['id']; ?>?action=Fuir">Fuir</a>
+    <a href="startgame.php?id=<?php echo $_GET['id']; ?>?action=Avancer">Avancer</a>
   </body>
 </html>
