@@ -1,5 +1,5 @@
 <?php
-include '../Class/Connexion.php';
+require_once '../Class/Connexion.php';
 ?>
 
 <!DOCTYPE html>

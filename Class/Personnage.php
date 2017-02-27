@@ -1,5 +1,5 @@
 <?php
-include 'Connexion.php';
+require_once 'Connexion.php';
 
 class Personnage
 {
@@ -112,7 +112,12 @@ class Personnage
 
     public function attaquer()
     {
+<<<<<<< HEAD
         $degats = Force_Personnnage - Defense_Personnage;
+=======
+
+    }
+>>>>>>> origin/master
 
         return $degats;
 
