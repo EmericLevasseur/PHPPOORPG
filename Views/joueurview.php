@@ -29,7 +29,7 @@
     <input type="text" name="descriptif" value="" id="id_coffre"><br></br>
 
     <label for="id_coffre">Mot de Passe :</label>
-    <input type="text" name="mdp" value="" id="id_coffre"><br></br>
+    <input type="password" name="mdp" value="" id="id_coffre"><br></br>
 
     <input type="submit" name="modifierJoueur" value="Enregistrer">
 

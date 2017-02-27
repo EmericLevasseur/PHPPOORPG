@@ -11,7 +11,7 @@ include '../Class/Joueur.php';
 
         $joueur = new Joueur($nom, $prenom, $pseudo, $email, $descriptif, $mdp);
 
-        $joueur->save();
+        $joueur->insert();
 
 
 ?>

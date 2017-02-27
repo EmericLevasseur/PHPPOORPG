@@ -1,5 +1,8 @@
 <?php
 
+session_start ();
+
+
 class Connexion {
 
   public function dbConnect(){

@@ -11,7 +11,19 @@ class Personnage
     public $pdvit           = '';
     public $pdm             = '';
     public $argent          = '';
-    public $classe          = '';
+
+    // Déclarations des constantes en rapport avec la force.
+
+    const FORCE_Guerrier = 50;
+    const FORCE_Paladin = 40;
+
+    const DEFENSE_Guerrier = 50;
+    const DEFENSE_Magicien = 50;
+    const DEFENSE_Paladin = 20;
+
+    const MAGIE_Magicien = 50;
+    const MAGIE_Paladin = 40;
+
 
     public function __construct($id = null)
     {
@@ -45,15 +57,7 @@ class Personnage
     {
         //  global $bdd;
         if(empty($this->id) && (!empty($_POST['nom'])) && (!empty($_POST['pdd'])) && (!empty($_POST['pdv'])) && (!empty($_POST['pda'])) && (!empty($_POST['pdvit'])) && (!empty($_POST['pdm'])) && (!empty($_POST['argent']))){
-          $aParamUser			=	[
-
-              ':classe'		=>	$_POST['classe'],
-
-
-          ];
-          $select = $this->db->prepare('SELECT idclasse from Classe where nom = :classe');
-          $select->execute( $aParamUser );
-          $aGetPersonnage	=	$select->fetch();
+            //$sQuery				=	;
             $aParamUser			=	[
                 ':nom'			=>	$_POST['nom'],
                 ':pdd'			=>	$_POST['pdd'],
@@ -62,17 +66,15 @@ class Personnage
                 ':pdvit'		=>	$_POST['pdvit'],
                 ':pdm'			=>	$_POST['pdm'],
                 ':argent'		=>	$_POST['argent'],
-                ':classe'		=>	$aGetPersonnage[0],
 
 
             ];
-
-            $oQuery	=	$this->db->prepare ( 'INSERT INTO `Personnage`(`nom`,`pdd`,`pdv`,`pda`,`pdvit`,`pdm`,`argent`,`id_classe`) VALUES (:nom,:pdd,:pdv,:pda,:pdvit,:pdm,:argent,:classe);' );
+            $oQuery	=	$this->db->prepare ( 'INSERT INTO `Personnage`(`nom`,`pdd`,`pdv`,`pda`,`pdvit`,`pdm`,`argent`) VALUES (:nom,:pdd,:pdv,:pda,:pdvit,:pdm,:argent);' );
             $bReturn = $oQuery->execute( $aParamUser );
-            $lastId = $this->db->lastInsertId();
+
             if($bReturn)
             {
-                header('Location: ../Views/startgame.php?id='.$lastId);
+                header('Location: ../Views/afficherPersonnage.php');
             }
 
         }elseif(!empty($this->id) && (!empty($_POST['nom'])) && (!empty($_POST['pdd'])) && (!empty($_POST['pdv'])) && (!empty($_POST['pda'])) && (!empty($_POST['pdvit'])) && (!empty($_POST['pdm'])) && (!empty($_POST['argent']))){
@@ -88,7 +90,6 @@ class Personnage
             ];
             $oQuery	=	$this->db->prepare ( 'UPDATE Personnage SET nom = :nom, pdd = :pdd, pdv = :pdv, pda = :pda, pdvit = :pdvit, pdm = :pdm, argent = :argent WHERE idPersonnage = :idPersonnage' );
             $bReturn = $oQuery->execute( $aParamUser );
-
             if($bReturn)
             {
                 header('Location: ../Views/afficherPersonnage.php');
@@ -108,55 +109,12 @@ class Personnage
             header('Location: ../Views/afficherPersonnage.php');
         }
     }
-    public function getclass()
-    {
-      $aParamUser			=	[
-          ':id'			=>	$this->idClasse,
-      ];
-      $oQuery =	$this->db->prepare ('SELECT nom from Classe where idClasse = (select id_classe from Personnage where id_classe = :id)');
-      $bReturn = $oQuery->execute( $aParamUser );
-      return $bReturn;
-    }
-
-    public function getNom()
-    {
-      $aParamUser			=	[
-          ':id'			=>	$_GET['id'],
-      ];
-
-      $oQuery =	$this->db->prepare ('SELECT * from Personnage where idPersonnage =  :id');
-      $oQuery->execute( $aParamUser );
-      $aGetNom	=	$oQuery->fetch();
-      return $aGetNom;
-    }
 
     public function attaquer()
     {
-      
-    }
+        $degats = Force_Personnnage - Defense_Personnage;
 
-    public function observer()
-    {
+        return $degats;
 
     }
-    public function fuir()
-    {
-
-    }
-
-    public function ouvrir()
-    {
-
-    }
-
-    public function defendre()
-    {
-
-    }
-
-    public function avancer()
-    {
-
-    }
-
 }

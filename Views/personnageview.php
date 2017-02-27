@@ -10,6 +10,8 @@
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
+
+
 <form class="" action="../Traitements/personnage.traitement.php?id=<?php echo $_GET['id']; ?>" method="post">
     <legend>Création d'un personnage </legend>
     <br>
@@ -34,18 +36,9 @@
     <label for="id_coffre">Argent :</label>
     <input type="text" name="argent" value="" id="id_coffre"><br></br>
 
-    <label for="argent">Choisissez votre classe ?</label>
-    <select class="" name="classe">
-      <option value="paladin" selected="">paladin</option>
-      <option value="barbare">barbare</option>
-      <option value="magicien">magicien</option>
-      <option value="gobelin">gobelin</option>
-      <option value="magicien noir">magicien noir</option>
-      <option value="dragon">dragon</option>
-    </select>
-
     <input type="submit" name="modifierPersonnage" value="Enregistrer">
 
 </form>
+
 </body>
 </html>

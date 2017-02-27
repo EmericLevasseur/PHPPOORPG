@@ -43,17 +43,7 @@
             <input type="text" name="argent" id="argent" />
         </p>
 
-        <p>
-            <label for="argent">Choisissez votre classe ?</label>
-            <select class="" name="classe">
-              <option value="paladin" selected="">paladin</option>
-              <option value="barbare">barbare</option>
-              <option value="magicien">magicien</option>
-              <option value="gobelin">gobelin</option>
-              <option value="magicien noir">magicien noir</option>
-              <option value="dragon">dragon</option>
-            </select>
-        </p>
+        <br />
 
         <input type="submit" value="Valider" class="valider" />
     </fieldset>
