@@ -18,6 +18,7 @@
         </p>
 
         <p>
+<<<<<<< Updated upstream
             <label for="pdv">Combien a t-il de points de vie ?</label>
             <input type="text" name="pdv" id="pdv" />
         </p>
@@ -44,6 +45,18 @@
         </p>
 
         <br />
+=======
+            <label for="argent">Choisissez votre classe ?</label>
+            <select class="" name="classe">
+              <option value="paladin" selected="">paladin</option>
+              <option value="barbare">barbare</option>
+              <option value="magicien">magicien</option>
+              <option value="gobelin">gobelin</option>
+              <option value="magicien noir">magicien noir</option>
+              <option value="dragon">dragon</option>
+            </select>
+        </p>
+>>>>>>> Stashed changes
 
         <input type="submit" value="Valider" class="valider" />
     </fieldset>

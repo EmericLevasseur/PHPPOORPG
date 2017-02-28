@@ -3,7 +3,7 @@
 include '../Class/Login.php';
 
         $email = $_POST['email'];
-        $mdp = md5($_POST['mdp']);
+        $mdp = $_POST['mdp'];
 
         $_SESSION['email'] = $_POST['email'];
         $_SESSION['mdp'] = $_POST['mdp'];

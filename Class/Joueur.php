@@ -67,6 +67,7 @@ class Joueur {
             }
 
         }elseif(!empty($this->id) && (!empty($_POST['nom'])) && (!empty($_POST['prenom'])) && (!empty($_POST['pseudo'])) && (!empty($_POST['email'])) && (!empty($_POST['descriptif'])) && (!empty($_POST['mdp']))){
+
             $aParamUser			=	[
                 ':nom'			    =>	$_POST['nom'],
                 ':prenom'			=>	$_POST['prenom'],

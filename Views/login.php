@@ -10,9 +10,11 @@
 
         <form method="post" id="form" autocomplete="off" action="../Traitements/login.traitement.php" >
           <h1 id="titre">Login</h1>
+          <p>Email : </p>
           <div class="col-lg-6 col-lg-offset-3 champ">
             <input type="email" id="email" name="email" placeholder="Adresse Email"/>
           </div>
+          <p>Mot De passe</p>
           <div class=" col-lg-6 col-lg-offset-3 champ">
             <input type="password" id="mdp" name="mdp" placeholder="Mot de Passe"/>
           </div>

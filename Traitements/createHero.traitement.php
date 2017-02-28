@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< Updated upstream
 require ("../Class/Hero.php");
 
 $nom = $_POST['nom'];
@@ -13,7 +14,15 @@ $or = $_POST['argent'];
 $hero = new Hero($nom, $pdd, $pdv, $pda, $pdvit, $pdm, $argent);
 
 $hero->insert();
+=======
+require_once ("../Class/Personnage.php");
 
-header('Location: ../index.php');
+$nom = $_POST['nom'];
+$classe = $_POST['classe'];
+
+$hero = new Personnage($id,$nom, $classe);
+$hero->save();
+>>>>>>> Stashed changes
+
 
 ?>

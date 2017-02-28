@@ -15,8 +15,9 @@ if(!empty($_GET['id']))
    echo 'Points de défense : '; if(!empty($heros->pdd())){ echo $heros->pdd(); }else{echo 0;}
    echo '</br>';
    echo 'Points de magie : '; if(null == $heros->pdm()){ echo $heros->pdm(); }else{echo 0;}
+}else{
+    header('Location: createHero.php');
 }
-
 if(!empty($_GET['action']))
 {
   switch($_GET['action'])
