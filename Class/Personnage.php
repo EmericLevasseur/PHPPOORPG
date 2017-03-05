@@ -12,17 +12,6 @@ class Personnage
     public $pdm             = '';
     public $argent          = '';
 
-    // Déclarations des constantes en rapport avec la force.
-
-    const FORCE_Guerrier = 50;
-    const FORCE_Paladin = 40;
-
-    const DEFENSE_Guerrier = 50;
-    const DEFENSE_Magicien = 50;
-    const DEFENSE_Paladin = 20;
-
-    const MAGIE_Magicien = 50;
-    const MAGIE_Paladin = 40;
 
 
     public function __construct($id = null)
@@ -112,12 +101,7 @@ class Personnage
 
     public function attaquer()
     {
-<<<<<<< HEAD
-        $degats = Force_Personnnage - Defense_Personnage;
-=======
 
-    }
->>>>>>> origin/master
 
         return $degats;
 

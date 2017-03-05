@@ -61,4 +61,53 @@ private $db;
     $aGetNom	=	$oQuery->fetch();
     return $aGetNom;
   }
+
+
+  public static function getNiveau($idSalle)
+  {
+    $db = new Connexion();
+    $db = $db->dbConnect();
+    $aParam = [
+      ':id' => $idSalle[0].$idSalle[1],
+    ];
+    $sql      = 'SELECT * FROM Niveau where idNiveau = :id';
+    $oQuery   = $db->prepare($sql);
+    $oQuery->execute($aParam);
+    $aNiveau	=	$oQuery->fetch();
+    return $aNiveau;
+  }
+
+  public static function getCoffre($coffre)
+  {
+    $db = new Connexion();
+    $db = $db->dbConnect();
+    $aParam = [
+      ':id' => $coffre['id_coffre'],
+    ];
+    $sql      = 'SELECT * FROM Coffre where idCoffre = :id';
+    $oQuery   = $db->prepare($sql);
+    $oQuery->execute($aParam);
+    $aCoffre	=	$oQuery->fetch();
+    return $aCoffre;
+  }
+
+  public static function getMonstre($idSalle)
+  {
+    $db = new Connexion();
+    $db = $db->dbConnect();
+    $aParam = [
+      ':id' => $idSalle[0].$idSalle[1],
+    ];
+    $sql      = 'SELECT * FROM Personnage where id_niveau = :id and (id_classe = 5 or id_classe = 6 or id_classe = 7)';
+    $oQuery   = $db->prepare($sql);
+    $oQuery->execute($aParam);
+    $aMonstre	=	$oQuery->fetch();
+    return $aMonstre;
+  }
+
+  public static function updatevie()
+  {
+    
+  }
+
 }

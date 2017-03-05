@@ -17,6 +17,9 @@ Class Paladin extends Personnage
   {
     return $this->pdd = 20;
   }
-
+  public function pdv()
+  {
+    return $this->pdv = 100;
+  }
 
 }

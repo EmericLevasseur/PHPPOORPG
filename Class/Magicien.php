@@ -18,6 +18,10 @@ Class Magicien extends Personnage
   {
     return $this->pdd = 50;
   }
+  public function pdv()
+  {
+    return $this->pdv = 100;
+  }
 
 
 }
