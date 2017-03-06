@@ -14,4 +14,4 @@ include '../Class/Login.php';
 
 ?>
 
-<button type="button"  class="btn btn-info"><a href="../Views/profil.php">Profil</a></button>
+<button type="button"  class="btn btn-info"><a href="../menu.php">Retour</a></button>

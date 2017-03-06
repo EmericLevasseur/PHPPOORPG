@@ -38,7 +38,7 @@ class Hero {
         $aUser					=	$recup->fetch();
         if($aUser)
         {
-          header('Location: ../Views/startgame.php?id='. $aUser[0] .'&idSalle='. $aSalle[0]);
+          header('Location: ../Views/startgame.php?id='. $aUser[0] .'&idSalle=22&action=');
         }
 
     }

@@ -3,7 +3,9 @@ require_once ('../Class/Taverne.php');
 $text ='';
 $dmg ='';
 $dmgsubi ='';
+if(isset($_GET['id'])){
 $id = $_GET['id'];
+}
 if(isset($_GET['idSalle'])){
   $idSalle = $_GET['idSalle'];
 }
@@ -26,8 +28,6 @@ if(!empty($_GET['id']))
     $cle = Taverne::getCoffre($coffre);
   }
 
-}else{
-    header('Location: createHero.php');
 }
 
 
@@ -49,7 +49,7 @@ if(!empty($_GET['action']))
     break;
     case('Avancer'):
     if($idSalle == 32){
-      header('Location: findujeu.php');
+      header('Location: Views/findujeu.php');
     }
       $monstre = Taverne::getMonstre($heroNom);
       $coffre = Taverne::getNiveau($heroNom);
@@ -115,7 +115,7 @@ if(!empty($_GET['action']))
       $viemonstre = ($heros->pdv() - $dmg);
 
       $vie = ($heros->pdv() - $dmgsubi);
-    
+
     }
 
 }
@@ -124,10 +124,5 @@ if(!empty($_GET['action']))
 
   if(!empty($_GET['salle']))
   {
-    $text .=  'La salle est observée';
-  }
-  if(!empty($cle['objet']))
-  {
-    $text .= 'Vous possèdez une cle';
-
+    $text .=  'Salle observée';
   }

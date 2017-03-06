@@ -104,7 +104,7 @@ a:active {
 <div class="one"></div>
 <div class="two"></div>
 <div class="back">
-</div>
+
 
 <div id='menu-wrapper'>
   <div id='menu-header'>Menu du Jeu</div>
@@ -112,9 +112,7 @@ a:active {
     <li class='main-menu selected'><a href="Views/joueurview.php">Inscription</a></li>
     <li class='main-menu'><a href="Views/login.php">Login</a></li>
   </br>
-  <li class='main-menu selected'><a href="Views/createHero.php">Créer un Personnage</a></li>
-    <li class='main-menu'><a href="Views/niveauview.php">Créer un Niveau</a></li>
-  </br>
-    <li class='main-menu'><a href="http://www.kongregate.com/games/DustinAux/the-enchanted-cave-2">Lancer la partie</a></li>
+
+    <li class='main-menu'><a href="Views/createHero.php">Lancer la partie</a></li>
   </ul>
 </div>
